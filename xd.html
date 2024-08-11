@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#8a7d9b;
+    font-family: Arial, sans-serif;
+    background-color:#8a7d9b ;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #8a7d9b;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial;
+    padding-right: 10px;
+}
+.logo {
+    max-height: 70px;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #cea0ea;
+    border-radius: 20px;
+}
+.main{
+    border: 2px solid black;
+    background-color: #F1E7F4;
+    height: 100px;
+}
+.titulo{
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+}
+.imagen{
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 7%;
+    display: flex;
+    gap: 39px;
+    flex-direction: vertical;
+    width: 20px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.imagen2{
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 8%;
+    display: flex;
+    gap: 59px;
+    flex-direction: vertical;
+    width: 20px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.imagen3{
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 7%;
+    display: flex;
+    gap: 58px;
+    flex-direction: vertical;
+    width: 20px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.imagen4{
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 7%;
+    display: flex;
+    gap: 62px;
+    flex-direction: vertical;
+    width: 20px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.im{
+    float: left;
+    margin-left: 0px;
+    border-radius: 30px;
+    width: 250px;
+    height: 300px;
+    transition: transform 0.2s;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.botones{
+    margin-top: 120px;
+    margin-left: 9%;
+    gap: 200px;
+}
+.botones1{
+    margin-top: -49px;
+    margin-left: 32%;
+    gap: 200px;
+}
+.botones2{
+    margin-top: -51px;
+    margin-left: 55%;
+    gap: 200px;
+}
+.botones3{
+    margin-top: -51px;
+    margin-left: 78%;
+    gap: 200px;
+}
+.boton1{
+    border: 3px solid black;
+    background-color: #F1E7F4;
+    width: 17%;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+}
+.boton2{
+    border: 3px solid black;
+    background-color: #F1E7F4;
+    width: 22%;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+}.boton3{
+    border: 3px solid black;
+    background-color: #F1E7F4;
+    width: 33%;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+}
+.boton4{
+    border: 3px solid black;
+    background-color: #F1E7F4;
+    width: 67%;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+}
+.inicio{
+    margin-top: 15px;
+    width: 100%;
+    height: 30px;
+    background-color: #F1E7F4;
+    border: 2px solid black;
+}
+.inicio2{
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.ini{
+    text-decoration: none;
+    color: #000;
+}
+.footer {
+    margin-top: 10px;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+.año{
+    margin-top: 20px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .imagen,
+    .imagen2,
+    .imagen3,
+    .imagen4 {
+        margin-left: 5%;
+        gap: 20px;
+    }
+
+    .botones,
+    .botones1,
+    .botones2,
+    .botones3 {
+        margin-left: 5%;
+    }
+
+    .boton1,
+    .boton2,
+    .boton3,
+    .boton4 {
+        max-width: 150px;
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .imagen,
+    .imagen2,
+    .imagen3,
+    .imagen4 {
+        margin-left: 5%;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .im {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .botones,
+    .botones1,
+    .botones2,
+    .botones3 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .boton1,
+    .boton2,
+    .boton3,
+    .boton4 {
+        max-width: 200px;
+    }
+}
+        #mensaje-flotante {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+        }
+         .oculto {
+            display: none;
+        }
+   </style>
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="logo de mi empresa" class="logo">
+            <nav class="nav">
+                <ul>
+                  <li><a href="http://127.0.0.1:5500/categorias.html">Todas nuestras categorias</a></li>
+                    <li><a href="http://127.0.0.1:5500/Ofertas.html">Ofertas del dia</a></li>
+                    <li><a href="http://127.0.0.1:5500/TarjetasRegalo.html">Targetas de regalo</a></li>
+                    <li><a href="http://127.0.0.1:5500/Sugerencias.html">Lugar de sugerencias</a></li>
+                    <li><a href="http://127.0.0.1:5500/CentroAyuda.html#">Centro de ayuda</a></li>
+                    <li><a href="http://127.0.0.1:5500/servicioCliente.html">Servicios a nuestros clientes </a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            <h1 class="titulo">NUESTROS ACCESORIOS </h1>
+          </div>
+         </div>
+         <div class="imagen">
+             <img   class="im" src="img/accesorios1.jpg" alt="">
+             <img class="im" src="img/accesorios2.jpg" alt="">
+             <img class="im" src="img/accesorios3.jpg" alt="">
+             <img class="im" src="img/accesorios4.jpg" alt="">
+         </div>
+         <div class="botones">
+             <div class="boton1"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones1">
+             <div class="boton2"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones2">
+             <div class="boton3"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones3">
+             <div class="boton4"><a  href="#">OBTENER</a></div>
+         </div>
+         <div class="imagen2">
+             <img class="im" src="img/accesorios5.jpg" alt="">
+             <img class="im" src="img/accesorios6.jpg" alt="">
+             <img class="im" src="img/accesorios7.jpg" alt="">
+             <img class="im" src="img/accesorios8.jpg" alt="">
+         </div>
+         <div class="botones">
+             <div class="boton1"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones1">
+             <div class="boton2"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones2">
+             <div class="boton3"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones3">
+             <div class="boton4"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="imagen3">
+             <img class="im" src="img/accesorios9.jpg" alt="">
+             <img class="im" src="img/accesorios10.jpg" alt="">
+             <img class="im" src="img/accesorios11.jpg" alt="">
+             <img class="im" src="img/accesorios12.jpg" alt="">
+         </div>
+         <div class="botones">
+             <div class="boton1"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones1">
+             <div class="boton2"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones2">
+             <div class="boton3"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones3">
+             <div class="boton4"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="imagen4">
+             <img class="im" src="img/accesorios13.jpg" alt="">
+             <img class="im" src="img/accesorios14.jpg" alt="">
+             <img class="im" src="img/accesorios15.jpg" alt="">
+             <img class="im" src="img/accesorios16.jpg" alt="">
+         </div>
+         <div class="botones">
+             <div class="boton1"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones1">
+             <div class="boton2"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones2">
+             <div class="boton3"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="botones3">
+             <div class="boton4"><a href="#">OBTENER</a></div>
+         </div>
+         <div class="inicio">
+             <div class="inicio2">
+                 <a class="ini" href="http://127.0.0.1:5500/index.html">Inicio</a>
+             </div>
+         </div>
+         <div class="footer">
+            <a href="#">Condiciones de uso</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Tus opciones de privacidad en los anuncios</a>
+            <p class="año">2024-2024 J.R.D.com, Inc. o sus afiliados</p>
+        </div>
+    </div>
+    <div id="mensaje-flotante" class="oculto">
+      <h2>Tienda De Ropa</h2>
+      <p id="mensaje-compra"></p>
+      <p><img style="width: 120px; height: auto; padding: 10px;" src="https://i.pinimg.com/736x/47/ce/14/47ce14ddc703ed6395fcc2aa8d9c6f61.jpg" alt="feliz"></p>
+      <p id="mensaje-gracias"></p>
+      <button id="explorar-btn">Seguir explorando</button>
+  </div>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const botones = document.querySelectorAll('.botones a, .botones1 a, .botones2 a, .botones3 a');
+          const mensajeFlotante = document.getElementById('mensaje-flotante');
+          const mensajeCompra = document.getElementById('mensaje-compra');
+          const mensajeGracias = document.getElementById('mensaje-gracias');
+          const explorarBtn = document.getElementById('explorar-btn');
+
+          botones.forEach(boton => {
+              boton.addEventListener('click', function(event) {
+                  event.preventDefault(); 
+                  const prenda = 'la prenda'; 
+                  mensajeCompra.textContent = 'Haz comprado esta prenda';
+                  mensajeGracias.textContent = 'Gracias por tu compra';
+                  mensajeFlotante.style.display = 'block';
+              });
+          });explorarBtn.addEventListener('click', function() {
+              mensajeFlotante.style.display = 'none';
+          });
+      });
+  </script>
+</body>
+</html>

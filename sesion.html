@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/fondoo.jpg);
+            background-size: cover;
+        }
+        .imagen{
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+        .login-container{
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #E6D3FF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .register-container {
+            max-width: 700px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #E6D3FF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .form-group input[type="submit"] {
+            background-color: var(--secondary-color);
+            color: black;
+            border: 2px solid black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: white;
+        }
+        .toggle-link {
+            margin-top: 20px;
+            display: block;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h1>BIENVENIDO</h1>
+        <img class="imagen" src="img/logo.png" alt="" width="210px" height="200px">
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" placeholder="Correo electrónico" id="emailInput">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Contraseña" id="passwordInput">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Iniciar sesión">
+            </div>
+        </form>
+        <a class="toggle-link" id="showRegister">¿No tienes cuenta? Regístrate</a>
+    </div>
+
+    <div class="register-container" id="registerContainer" style="display:none;">
+        <h1>BIENVENIDO REGISTRATE AQUI</h1>
+        <img class="imagen" src="img/logo.png" alt="" width="210px" height="200px">
+        <form id="registerForm">
+            <div class="form-group">
+                <input type="text" placeholder="Nombre completo" id="NameInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Ubicacion" id="NameInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Correo electrónico" id="registerEmailInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Numero de Telefono" id="NumberandpfoneInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Numero de tu tarjeta de credito o debito" id="NumberandpfoneInput">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Contraseña" id="registerPasswordInput">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Repetir la contraseña" id="registerEmailInput">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar">
+            </div>
+        </form>
+        <a class="toggle-link" id="showLogin">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+
+    <script>
+             document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById("emailInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            if (localStorage.getItem(email) === password) {
+                localStorage.setItem("loggedInUser", email);
+                window.location.href = "index.html";
+            } else {
+                alert("Correo o contraseña incorrectos o cuenta no existente. Por favor, regístrate si no tienes una cuenta.");
+            }
+        });
+
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById("registerEmailInput").value;
+            var password = document.getElementById("registerPasswordInput").value;
+
+            localStorage.setItem(email, password);
+            alert("Registro exitoso. Por favor, inicia sesión.");
+            document.getElementById("registerContainer").style.display = "none";
+            document.getElementById("loginContainer").style.display = "block";
+        });
+
+        document.getElementById("showRegister").addEventListener("click", function() {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("registerContainer").style.display = "block";
+        });
+
+        document.getElementById("showLogin").addEventListener("click", function() {
+            document.getElementById("registerContainer").style.display = "none";
+            document.getElementById("loginContainer").style.display = "block";
+        });
+    </script>
+</body>
+</html>
